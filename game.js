@@ -34,9 +34,15 @@ class Game {
         this.awayPost.draw();
 
         if (this.player.aPlayer.collide(this.ball.ballSpr)) {
-            this.ball.ballSpr.velocity.x += 0.03;
+            // this.ball.ballSpr.velocity.x += 0.03;
             // this.ball.ballSpr.velocity.y += 0.03;
-            this.ball.ballSpr.velocity.z += 180;
+            // this.ball.ballSpr.velocity.z += 180;
+            if (keyWentDown('s')) {
+                this.ball.ballSpr.setSpeed(
+                    10 + this.player.aPlayer.getSpeed(),
+                    this.player.aPlayer.rotation
+                );
+            }
         }
     }
 }

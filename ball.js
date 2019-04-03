@@ -14,7 +14,8 @@ class Ball {
     setup() {
         this.ballSpr = createSprite(this.x, this.y);
         this.ballSpr.addImage(ballImage);
-        // this.ballSpr.mass = 1;
+        this.ballSpr.mass = 1;
+        this.ballSpr.friction = 0.02;
         console.log(this.ballSpr.velocity);
     }
     draw() {
