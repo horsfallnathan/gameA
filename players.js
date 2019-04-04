@@ -10,7 +10,7 @@ class Player {
         this.aPlayer.rotation = 0;
         this.aPlayer.friction = 0.02;
         this.aPlayer.mass = 2;
-        this.aPlayer.setCollider('circle', 0, 0, 20);
+        // this.aPlayer.setCollider('circle', 0, 0, 20);
     }
     draw() {
         drawSprites();
@@ -47,13 +47,4 @@ class Player {
             }
         }
     }
-
-    // if (keyDown(LEFT_ARROW)) this.aPlayer.rotation -= 4;
-    // if (keyDown(RIGHT_ARROW)) this.aPlayer.rotation += 4;
-    // if (keyDown(UP_ARROW)) {
-    //     this.aPlayer.addSpeed(0.08, this.aPlayer.rotation);
-    //     // this.aplayer.changeAnimation("thrust");
-    // }
 }
-
-// let homePlayer = new Player(200, 500);
