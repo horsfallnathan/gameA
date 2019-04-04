@@ -32,6 +32,9 @@ class Goalkeeper {
         if (this.goalie.position.x > GAME_WIDTH) {
             this.goalie.position.x = GAME_WIDTH;
         }
+        // if (this.homeGoalie.position.x < 20) {
+        //     this.homeGoalie.position.x = 20;
+        // }
         // this.move(0, 0.4);
     }
     // move(x, y) {

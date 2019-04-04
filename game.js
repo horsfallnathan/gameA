@@ -4,7 +4,7 @@ class Game {
         this.player = new Player(400, 400);
         this.homePost = new Posts(0, GAME_HEIGHT / 2, 40, 180);
         this.awayPost = new Posts(GAME_WIDTH, GAME_HEIGHT / 2, 40, 180);
-        this.goalie = new Goalkeeper(GAME_WIDTH, GAME_HEIGHT / 2);
+        this.goalie = new Goalkeeper(GAME_WIDTH, GAME_HEIGHT / 2, GAME_WIDTH);
         this.homeGoalie = new Goalkeeper(0, GAME_HEIGHT / 2);
         // this.player2 = new Player(40, 400);
         this.ball = new Ball();
@@ -36,6 +36,7 @@ class Game {
         this.ball.draw();
         this.homePost.draw();
         this.awayPost.draw();
+
         // this.homeGoalie.bounce(this.goalie.homeTopedge);
         // this.homeGoalie.bounce(this.goalie.homeBottomedge);
     }
