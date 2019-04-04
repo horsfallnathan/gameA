@@ -10,7 +10,7 @@ class Player {
         this.aPlayer.rotation = 0;
         this.aPlayer.friction = 0.02;
         this.aPlayer.mass = 2;
-        // this.aPlayer.setCollider('circle', 0, 0, 20);
+        this.aPlayer.setCollider('circle', 0, 0, 20);
     }
     draw() {
         drawSprites();
