@@ -1,12 +1,19 @@
 class Player {
-    constructor(x, y) {
+    constructor(x, y, leftM, rightM, upM, downM, shoot, team) {
         this.x = x;
         this.y = y;
-        // this.image = playerHome;
+        this.rightM = rightM;
+        this.leftM = leftM;
+        this.upM = upM;
+        this.downM = downM;
+        this.shoot = shoot;
+        this.team = team;
+        // this.image = playerAway;
     }
     setup() {
         this.aPlayer = createSprite(this.x, this.y);
-        this.aPlayer.addImage(playerHome);
+        if (this.team == 'home') this.aPlayer.addImage(playerHome);
+        else this.aPlayer.addImage(playerAway);
         this.aPlayer.rotation = 0;
         this.aPlayer.friction = 0.02;
         this.aPlayer.mass = 2;
@@ -14,10 +21,10 @@ class Player {
     }
     draw() {
         drawSprites();
-        this.move();
+        this.move(this.leftM, this.rightM, this.upM, this.downM);
     }
-    move() {
-        if (keyIsDown(LEFT_ARROW)) {
+    move(left, right, up, down) {
+        if (keyIsDown(left)) {
             this.aPlayer.position.x -= 4;
             this.aPlayer.mirrorX = -1;
             if (this.aPlayer.position.x < 40) {
@@ -25,21 +32,21 @@ class Player {
             }
         }
 
-        if (keyIsDown(RIGHT_ARROW)) {
+        if (keyIsDown(right)) {
             this.aPlayer.position.x += 4;
-            this.aPlayer.mirrorX = 1;
+            sthis.aPlayer.mirrorX = 1;
             if (this.aPlayer.position.x > GAME_WIDTH - 40) {
                 this.aPlayer.position.x = GAME_WIDTH - 45;
             }
         }
-        if (keyIsDown(UP_ARROW)) {
+        if (keyIsDown(up)) {
             this.aPlayer.position.y -= 4;
             this.aPlayer.rotation += 2;
             if (this.aPlayer.position.y < 40) {
                 this.aPlayer.position.y = 45;
             }
         }
-        if (keyIsDown(DOWN_ARROW)) {
+        if (keyIsDown(down)) {
             this.aPlayer.position.y += 4;
             this.aPlayer.rotation -= 2;
             if (this.aPlayer.position.y > GAME_HEIGHT - 40) {

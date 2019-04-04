@@ -22,7 +22,12 @@ class Ball {
     draw() {
         drawSprites();
         // this.ballSpr.position.x += this.dx;
-        game.player.aPlayer.bounce(this.ballSpr, afterCollision());
+        if (game.player.aPlayer.collide(this.ballSpr)) {
+            afterCollision();
+        }
+        // if (game.player.awayPlayer.collide(this.ballSpr)) {
+        //     afterCollision2();
+        // }
 
         if (this.ballSpr.position.y > GAME_HEIGHT - 20) {
             this.ballSpr.velocity.y -= 3;
@@ -40,10 +45,7 @@ class Ball {
 }
 
 function afterCollision() {
-    // game.ball.ballSpr.velocity.x += 0.03;
-    // game.ball.ballSpr.velocity.y += 0.03;
-    // game.ball.ballSpr.velocity.z += 180;
-    if (keyWentDown('s')) {
+    if (keyWentDown('l')) {
         console.log(game.player.aPlayer.rotation);
         if (keyIsDown(LEFT_ARROW)) {
             game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), -180);
@@ -69,6 +71,34 @@ function afterCollision() {
         if (keyIsDown(RIGHT_ARROW) && keyIsDown(DOWN_ARROW)) {
             game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), 45);
         }
-        // game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), -90);
+    }
+}
+function afterCollision2() {
+    if (keyWentDown('SPACE')) {
+        console.log(game.player.aPlayer.rotation);
+        if (keyIsDown(LEFT_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), -180);
+        }
+        if (keyIsDown(DOWN_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), 90);
+        }
+        if (keyIsDown(LEFT_ARROW) && keyIsDown(UP_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), -135);
+        }
+        if (keyIsDown(LEFT_ARROW) && keyIsDown(DOWN_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), 135);
+        }
+        if (keyIsDown(RIGHT_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), 0);
+        }
+        if (keyIsDown(UP_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), -90);
+        }
+        if (keyIsDown(RIGHT_ARROW) && keyIsDown(UP_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), -45);
+        }
+        if (keyIsDown(RIGHT_ARROW) && keyIsDown(DOWN_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), 45);
+        }
     }
 }

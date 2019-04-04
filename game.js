@@ -1,7 +1,8 @@
 class Game {
     constructor() {
         this.pitch = new Pitch();
-        this.player = new Player(400, 400);
+        this.awayPlayer = new Player(800, 400, 65, 68, 87, 83, 32, 'home');
+        this.player = new Player(400, 400, 37, 39, 38, 40, 'away');
         this.homePost = new Posts(0, GAME_HEIGHT / 2, 40, 180);
         this.awayPost = new Posts(GAME_WIDTH, GAME_HEIGHT / 2, 40, 180);
         this.goalie = new Goalkeeper(GAME_WIDTH, GAME_HEIGHT / 2, GAME_WIDTH);
@@ -18,6 +19,7 @@ class Game {
         this.ball.setup();
         this.pitch.setup();
         this.player.setup();
+        this.awayPlayer.setup();
         // this.player2.setup();
         this.player.move();
         this.homePost.setup();
@@ -32,6 +34,7 @@ class Game {
         this.goalie.draw();
         this.homeGoalie.draw();
         this.player.draw();
+        this.awayPlayer.draw();
         // this.player2.draw();
         this.ball.draw();
         this.homePost.draw();

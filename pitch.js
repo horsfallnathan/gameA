@@ -5,13 +5,9 @@ class Pitch {
         this.y1 = INIT;
         this.y2 = BOUNDARY_BOTTOM;
     }
-    setup() {
-        this.top = createSprite(40, this.y1, this.x2 * 2, 4);
-        this.top.immovable = true;
-    }
+    setup() {}
     draw() {
         drawSprites();
-        this.top.bounce(game.ball.ballSpr);
         // console.log('bounce');
         fill(0, 0, 0, 0);
         strokeWeight(4);

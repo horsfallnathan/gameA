@@ -2,9 +2,6 @@ const game = new Game();
 
 // const post = new Posts();
 
-function setup() {
-    game.setup();
-}
 function preload() {
     ballImage = loadImage(
         'https://raw.githubusercontent.com/horsfallnathan/game-/master/game/Assets/SoccerBallsmall.png'
@@ -15,6 +12,12 @@ function preload() {
     playerAway = loadImage(
         'https://raw.githubusercontent.com/horsfallnathan/gameA/master/Assets/playerAway.png'
     );
+    goalieBound = loadImage(
+        'https://raw.githubusercontent.com/horsfallnathan/gameA/master/Assets/goalieBound.png'
+    );
+}
+function setup() {
+    game.setup();
 }
 function draw() {
     game.draw();

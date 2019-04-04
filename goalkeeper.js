@@ -6,9 +6,13 @@ class Goalkeeper {
     setup() {
         this.goalie = createSprite(this.x, this.y);
         this.topedge = createSprite(GAME_WIDTH - 100, GAME_HEIGHT / 2 - 90, 185, 2);
+        this.topedge.addImage(goalieBound);
         this.homeTopedge = createSprite(100, GAME_HEIGHT / 2 - 90, 185, 2);
+        this.homeTopedge.addImage(goalieBound);
         this.bottomedge = createSprite(GAME_WIDTH - 100, GAME_HEIGHT / 2 + 90, 185, 2);
+        this.bottomedge.addImage(goalieBound);
         this.homeBottomedge = createSprite(100, GAME_HEIGHT / 2 + 90, 185, 2);
+        this.homeBottomedge.addImage(goalieBound);
         this.goalie.addImage(playerHome);
         this.goalie.setSpeed(6, -90);
         this.goalie.maxSpeed = 7;
