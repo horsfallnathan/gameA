@@ -15,7 +15,6 @@ class Posts {
     }
     score() {
         if (this.post.overlap(game.ball.ballSpr)) {
-            console.log('goal');
             if (game.ball.ballSpr.position.x > GAME_WIDTH - 40) {
                 textSize(50);
                 text(`Away Team Scores!!`, GAME_WIDTH / 2 - 50, GAME_HEIGHT / 2);

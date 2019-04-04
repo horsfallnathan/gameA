@@ -22,6 +22,10 @@ class Player {
     draw() {
         drawSprites();
         this.move(this.leftM, this.rightM, this.upM, this.downM);
+
+        if (this.aPlayer.collide(game.ball.ballSpr)) {
+            afterCollision();
+        }
     }
     move(left, right, up, down) {
         if (left && keyIsDown(left)) {
@@ -52,6 +56,36 @@ class Player {
             if (this.aPlayer.position.y > GAME_HEIGHT - 40) {
                 this.aPlayer.position.y = GAME_HEIGHT - 45;
             }
+        }
+    }
+}
+
+function afterCollision() {
+    if (keyWentDown('l')) {
+        console.log(game.player.aPlayer.rotation);
+        if (keyIsDown(LEFT_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), -180);
+        }
+        if (keyIsDown(DOWN_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), 90);
+        }
+        if (keyIsDown(LEFT_ARROW) && keyIsDown(UP_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), -135);
+        }
+        if (keyIsDown(LEFT_ARROW) && keyIsDown(DOWN_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), 135);
+        }
+        if (keyIsDown(RIGHT_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), 0);
+        }
+        if (keyIsDown(UP_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), -90);
+        }
+        if (keyIsDown(RIGHT_ARROW) && keyIsDown(UP_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), -45);
+        }
+        if (keyIsDown(RIGHT_ARROW) && keyIsDown(DOWN_ARROW)) {
+            game.ball.ballSpr.setSpeed(10 + game.player.aPlayer.getSpeed(), 45);
         }
     }
 }

@@ -5,8 +5,8 @@ class Game {
         this.player = new Player(400, 400, 37, 39, 38, 40, 76, 'away');
         this.homePost = new Posts(0, GAME_HEIGHT / 2, 40, 180);
         this.awayPost = new Posts(GAME_WIDTH, GAME_HEIGHT / 2, 40, 180);
-        this.goalie = new Goalkeeper(GAME_WIDTH, GAME_HEIGHT / 2, GAME_WIDTH);
-        this.homeGoalie = new Goalkeeper(0, GAME_HEIGHT / 2);
+        this.goalie = new Goalkeeper(GAME_WIDTH, GAME_HEIGHT / 2, GAME_WIDTH, 'away');
+        this.homeGoalie = new Goalkeeper(0, GAME_HEIGHT / 2, 'home');
         this.ball = new Ball();
         this.post = new Posts();
     }

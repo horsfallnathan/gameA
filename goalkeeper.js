@@ -1,7 +1,8 @@
 class Goalkeeper {
-    constructor(x, y) {
+    constructor(x, y, team) {
         this.x = x;
         this.y = y;
+        this.team = team;
     }
     setup() {
         this.goalie = createSprite(this.x, this.y);
@@ -32,55 +33,12 @@ class Goalkeeper {
         this.goalie.bounce(this.homeBottomedge);
 
         this.goalie.bounce(game.ball.ballSpr);
-
-        if (this.goalie.position.x > GAME_WIDTH) {
+        if (this.team == 'home' && this.goalie.position.x < 5) this.goalie.position.x = 5;
+        if (this.team == 'away' && this.goalie.position.x > GAME_WIDTH)
             this.goalie.position.x = GAME_WIDTH;
-        }
         // if (this.homeGoalie.position.x < 20) {
         //     this.homeGoalie.position.x = 20;
         // }
         // this.move(0, 0.4);
     }
-    // move(x, y) {
-    // this.goalie.position.x += x;
-    // this.goalie.velocity.y = 1;
-
-    // // this.goalie.position.y -= y;
-    // if (
-    //     // this.goalie.position.y < GAME_HEIGHT / 2 - 90 ||
-    //     this.goalie.position.y >
-    //     GAME_HEIGHT / 2 + 90
-    // ) {
-    //     console.log('see me!!');
-    //     this.goalie.setSpeed(3, -90);
-    // this.goalie.position.y *= -1.15;
-    // }
-    // this.xSpeed = 0;
-    // this.ySpeed = 0;
-    // if (this.goalie.position.y > GAME_HEIGHT / 2 - 90) {
-    //     this.goalie.position.y -= y;
-    // } else if (this.goalie.position.y < GAME_HEIGHT / 2 - 90) {
-    //     this.goalie.position.y += y;
-    //     this.ySpeed = 0;
-    // } else if (this.goalie.position.y + 20 > GAME_HEIGHT / 2 + 90) {
-    //     this.goalie.position.y -= y;
-    //     this.ySpeed = 0;
-    // }
-    //     GAME_WIDTH, GAME_HEIGHT / 2, 40, 180;
-    // }
 }
-// function trackBall() {
-//     let diff = -(game.goalkeeper.position.x + 10 - game.ballSpr.position.x);
-//     if (diff < 0 && diff < -4) {
-//         diff = -5;
-//     } else if (diff > 0 && diff > 4) {
-//         diff = 5;
-//     }
-//     game.goalkeeper.move(0,diff * 0.5);
-//     if (game.goalie.position.y < 0){
-//         this.goalie.position.y =0
-//     }
-//     else if(this.goalie.position.y + this.goalie.height > GAME_HEIGHT){
-//         this.goalie.position.y = GAME_HEIGHT - this.goalie.height
-//     }
-// }
