@@ -24,7 +24,7 @@ class Player {
         this.move(this.leftM, this.rightM, this.upM, this.downM);
     }
     move(left, right, up, down) {
-        if (keyIsDown(left)) {
+        if (left && keyIsDown(left)) {
             this.aPlayer.position.x -= 4;
             this.aPlayer.mirrorX = -1;
             if (this.aPlayer.position.x < 40) {
@@ -32,21 +32,21 @@ class Player {
             }
         }
 
-        if (keyIsDown(right)) {
+        if (right && keyIsDown(right)) {
             this.aPlayer.position.x += 4;
-            sthis.aPlayer.mirrorX = 1;
+            this.aPlayer.mirrorX = 1;
             if (this.aPlayer.position.x > GAME_WIDTH - 40) {
                 this.aPlayer.position.x = GAME_WIDTH - 45;
             }
         }
-        if (keyIsDown(up)) {
+        if (up && keyIsDown(up)) {
             this.aPlayer.position.y -= 4;
             this.aPlayer.rotation += 2;
             if (this.aPlayer.position.y < 40) {
                 this.aPlayer.position.y = 45;
             }
         }
-        if (keyIsDown(down)) {
+        if (down && keyIsDown(down)) {
             this.aPlayer.position.y += 4;
             this.aPlayer.rotation -= 2;
             if (this.aPlayer.position.y > GAME_HEIGHT - 40) {

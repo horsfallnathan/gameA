@@ -25,9 +25,6 @@ class Ball {
         if (game.player.aPlayer.collide(this.ballSpr)) {
             afterCollision();
         }
-        // if (game.player.awayPlayer.collide(this.ballSpr)) {
-        //     afterCollision2();
-        // }
 
         if (this.ballSpr.position.y > GAME_HEIGHT - 20) {
             this.ballSpr.velocity.y -= 3;
