@@ -26,6 +26,8 @@ class Player {
     if (this.aPlayer.collide(game.ball.ballSpr)) {
       afterCollision();
     }
+    if (this.team === 'away') this.aPlayer.displace(game.homePlayer.aPlayer);
+    if (this.team === 'home') this.aPlayer.displace(game.awayPlayer.aPlayer);
   }
   move(left, right, up, down) {
     if (left && keyIsDown(left)) {
