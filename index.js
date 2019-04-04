@@ -13,7 +13,7 @@ function preload() {
         'https://raw.githubusercontent.com/horsfallnathan/gameA/master/Assets/playerHome.png'
     );
     playerAway = loadImage(
-        'https://raw.githubusercontent.com/horsfallnathan/game-/master/game/Assets/playerorangebg.png'
+        'https://raw.githubusercontent.com/horsfallnathan/gameA/master/Assets/playerAway.png'
     );
 }
 function draw() {
