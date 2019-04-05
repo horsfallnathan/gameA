@@ -2,22 +2,22 @@ const game = new Game();
 
 function preload() {
     ballKick = loadSound(
-        'https://raw.githubusercontent.com/horsfallnathan/gameA/master/Assets/ballkick.mp3'
+        'https://raw.githubusercontent.com/horsfallnathan/ironLeague19/master/mainGame/Assets/ballkick.mp3'
     );
     pitchbg = loadImage(
-        'https://raw.githubusercontent.com/horsfallnathan/gameA/master/Assets/pitch.png'
+        'https://raw.githubusercontent.com/horsfallnathan/ironLeague19/master/mainGame/Assets/pitch.png'
     );
     ballImage = loadImage(
-        'https://raw.githubusercontent.com/horsfallnathan/game-/master/game/Assets/SoccerBallsmall.png'
+        'https://raw.githubusercontent.com/horsfallnathan/ironLeague19/master/mainGame/Assets/SoccerBallsmall.png'
     );
     playerHome = loadImage(
-        'https://raw.githubusercontent.com/horsfallnathan/gameA/master/Assets/playerHome.png'
+        'https://raw.githubusercontent.com/horsfallnathan/ironLeague19/master/mainGame/Assets/playerHome.png'
     );
     playerAway = loadImage(
-        'https://raw.githubusercontent.com/horsfallnathan/gameA/master/Assets/playerAway.png'
+        'https://raw.githubusercontent.com/horsfallnathan/ironLeague19/master/mainGame/Assets/playerAway.png'
     );
     goalieBound = loadImage(
-        'https://raw.githubusercontent.com/horsfallnathan/gameA/master/Assets/goalieBound.png'
+        'https://raw.githubusercontent.com/horsfallnathan/ironLeague19/master/mainGame/Assets/goalieBound.png'
     );
 }
 function setup() {
@@ -35,5 +35,3 @@ function keyPressed() {
         ballKick.play();
     }
 }
-
-https://raw.githubusercontent.com/horsfallnathan/ironLeague19/master/mainGame/Assets/ballkick.mp3
