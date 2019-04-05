@@ -3,6 +3,9 @@ const game = new Game();
 // const post = new Posts();
 
 function preload() {
+    pitchbg = loadImage(
+        'https://raw.githubusercontent.com/horsfallnathan/gameA/master/Assets/pitch.png'
+    );
     ballImage = loadImage(
         'https://raw.githubusercontent.com/horsfallnathan/game-/master/game/Assets/SoccerBallsmall.png'
     );

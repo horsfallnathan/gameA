@@ -33,9 +33,10 @@ class Goalkeeper {
         this.goalie.bounce(this.homeBottomedge);
 
         this.goalie.bounce(game.ball.ballSpr);
+        if (this.team == 'away' && this.goalie.position.x > GAME_WIDTH - 80) {
+            this.goalie.position.x = GAME_WIDTH - 80;
+        }
         if (this.team == 'home' && this.goalie.position.x < 5) this.goalie.position.x = 5;
-        if (this.team == 'away' && this.goalie.position.x > GAME_WIDTH)
-            this.goalie.position.x = GAME_WIDTH;
         // if (this.homeGoalie.position.x < 20) {
         //     this.homeGoalie.position.x = 20;
         // }

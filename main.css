@@ -12,4 +12,44 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Roboto Slab', serif;
+}
+
+.game-time {
+    position: absolute;
+    top: 25%;
+    right: 30%;
+    color: white;
+    background: rgb(255, 255, 255, 0.3);
+    font-size: 20px;
+}
+#splash {
+    height: 50vh;
+    width: 50vh;
+    top: 25%;
+    position: absolute;
+    background: rgb(255, 255, 255, 0.6);
+    border-radius: 30px;
+}
+.dFalse {
+    display: none;
+}
+.dTrue {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#resumeButton {
+    padding: 1.5rem;
+    background: #009374;
+    display: inline-flex;
+    border-radius: 20px;
+    position: absolute;
+    top: 70%;
+    left: 50vw - 50%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    cursor: pointer;
 }
