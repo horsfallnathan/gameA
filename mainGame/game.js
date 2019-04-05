@@ -35,7 +35,7 @@ class Game {
         this.awayPost.draw();
     }
     over() {
-        if (5 - Math.floor(frameCount / 60) == 0) {
+        if (120 - Math.floor(frameCount / 60) == 0) {
             this.gameOver = true;
             gameOver();
             console.log('game over');
