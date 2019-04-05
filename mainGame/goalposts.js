@@ -42,9 +42,9 @@ function recordScore(team) {
         ++awayScores;
         updateHome();
     }
-    showSplash();
+    showSplash(team);
 
-    console.log(`Home Team\: ${homeScores} Away Team\: ${awayScores}`);
+    // console.log(`Home Team\: ${homeScores} Away Team\: ${awayScores}`);
 }
 updateHome();
 updateAway();
@@ -61,8 +61,10 @@ function updateAway() {
     homeA.innerHTML = homeScores;
 }
 
-function showSplash() {
+function showSplash(team) {
     let splash = document.getElementById('splash');
+    let message = document.getElementById('who');
+    message.innerHTML = `${team} Scores!!!`;
 
     splash.classList.toggle('dTrue', true);
     document.getElementById('resumeButton').addEventListener('click', function() {
