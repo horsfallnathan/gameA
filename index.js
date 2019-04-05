@@ -1,7 +1,5 @@
 const game = new Game();
 
-// const post = new Posts();
-
 function preload() {
     ballKick = loadSound(
         'https://raw.githubusercontent.com/horsfallnathan/gameA/master/Assets/ballkick.mp3'
@@ -29,9 +27,6 @@ function draw() {
     game.draw();
     game.over();
 }
-// if (keyIsDown(t)) {
-//     ballKick.play();
-// }
 
 function keyPressed() {
     if (keyCode === 76) {

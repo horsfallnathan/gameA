@@ -35,7 +35,7 @@ class Game {
         this.awayPost.draw();
     }
     over() {
-        if (120 - Math.floor(frameCount / 60) == 0) {
+        if (5 - Math.floor(frameCount / 60) == 0) {
             this.gameOver = true;
             gameOver();
             console.log('game over');
@@ -43,10 +43,41 @@ class Game {
     }
 }
 function gameOver() {
+    console.log('hey');
     winner();
     let gameGet = document.getElementById('gameOver');
     gameGet.classList.toggle('dTrue', true);
-    document.getElementById('newMatch').addEventListener('click', function() {
-        gameGet.classList.toggle('dTrue', false);
+    console.log(gameGet);
+    // document.getElementById('newGame').addEventListener('click', function() {
+    //     gameGet.classList.toggle('dTrue', false);
+    // });
+
+    document.getElementById('newGame').addEventListener('click', function() {
+        document.location.reload();
+        // document.getElementById('newGame').addEventListener('click', function() {
+        //     console.log('got here');
+        //     homeScores = 0;
+        //     awayScores = 0;
+        //     game.ball.ballSpr.position.x = GAME_WIDTH / 2;
+        //     game.ball.ballSpr.position.y = GAME_HEIGHT / 2;
+        //     game.ball.ballSpr.setSpeed(0);
+        //     game.awayPlayer.aPlayer.position.x = 800;
+        //     game.awayPlayer.aPlayer.position.y = 400;
+        //     game.homePlayer.aPlayer.position.x = 400;
+        //     game.homePlayer.aPlayer.position.y = 400;
     });
+}
+function winner() {
+    if (homeScores > awayScores) {
+        let winA = document.getElementById('winner');
+        winA.innerHTML = 'Home Team Wins!';
+    }
+    if (homeScores < awayScores) {
+        let winA = document.getElementById('winner');
+        winA.innerHTML = 'Away Team Wins!!!';
+    }
+    if (homeScores == awayScores) {
+        let winA = document.getElementById('winner');
+        winA.innerHTML = 'Up for a rematch?';
+    }
 }
