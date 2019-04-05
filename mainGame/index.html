@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,600,600i,700,700i,900"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    </head>
+    <body>
+        <div id="p5_loading" class="loadingclass">
+            <img src="https://media.giphy.com/media/131tNuGktpXGhy/giphy.gif" />
+        </div>
+        <div class="score-board">
+            <img src="./Assets/scoreBoard.png" />
+        </div>
+        <div id="awayScore" class="away-score"></div>
+        <div id="homeScore" class="home-score"></div>
+        <div id="gameTime" class="game-time">0:00</div>
+        <div id="splash" class="dFalse">
+            <div id="resumeButton">Resume Match</div>
+        </div>
+        <div id="gameOver" class="dFalse">
+            <h1>Game Over!</h1>
+            <div id="newGame">Start a new match!</div>
+            <div id="winner" class="winner">Player One Wins!</div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+
+        <script src="./p5.sound.js"></script>
+        <script src="./p5.play.js"></script>
+        <script src="./intro.js"></script>
+        <script src="./constants.js"></script>
+        <script src="./goalkeeper.js"></script>
+        <script src="./ball.js"></script>
+        <script src="./goalposts.js"></script>
+        <script src="./players.js"></script>
+        <script src="./pitch.js"></script>
+        <script src="./game.js"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>
