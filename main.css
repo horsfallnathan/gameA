@@ -12,21 +12,64 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Titillium Web', sans-serif;
 }
-
+.score-board {
+    position: absolute;
+    /* top: 15%; */
+    top: 2%; /*for 75% */
+    /* right: 38%; */
+    right: 32%; /*for 75% */
+}
 .game-time {
     position: absolute;
-    top: 25%;
-    right: 30%;
-    color: white;
-    background: rgb(255, 255, 255, 0.3);
-    font-size: 20px;
+    top: 5%; /*for 75% */
+    right: 49%; /*for 75% */
+    /* top: 17%; */
+    /* right: 49%; */
+    color: #000000;
+    /* background: rgb(255, 255, 255, 0.3); */
+    font-size: 25px;
+    font-weight: 600;
+}
+.home-score {
+    position: absolute;
+    top: 5%; /*for 75% */
+    right: 54%; /*for 75% */
+    /* top: 17%; */
+    /* right: 49%; */
+    color: #000000;
+    /* background: rgb(255, 255, 255, 0.3); */
+    font-size: 25px;
+    font-weight: 600;
+}
+.away-score {
+    position: absolute;
+    top: 5%; /*for 75% */
+    right: 44%; /*for 75% */
+    /* top: 17%; */
+    /* right: 49%; */
+    color: #000000;
+    /* background: rgb(255, 255, 255, 0.3); */
+    font-size: 25px;
+    font-weight: 600;
 }
 #splash {
     height: 50vh;
     width: 50vh;
     top: 25%;
+    position: absolute;
+    background: rgb(255, 255, 255, 0.6);
+    border-radius: 30px;
+}
+#gameOver {
+    height: 50vh;
+    width: 50vh;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     background: rgb(255, 255, 255, 0.6);
     border-radius: 30px;
@@ -52,4 +95,21 @@ body {
     color: #ffffff;
     font-size: 30px;
     cursor: pointer;
+}
+#newMatch {
+    padding: 1.5rem;
+    background: #009374;
+    display: inline-flex;
+    border-radius: 20px;
+    position: absolute;
+    top: 70%;
+    left: 50vw - 50%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#gameOver h1 {
+    font-size: 3rem;
 }

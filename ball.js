@@ -10,9 +10,10 @@ class Ball {
 
         this.ballSpr.friction = 0.02;
     }
+
     draw() {
-        textSize(40);
-        text(`${120 - Math.floor(frameCount / 60)}`, 100, 100);
+        let time = document.getElementById('gameTime');
+        time.innerHTML = 120 - Math.floor(frameCount / 60);
         drawSprites();
         if (this.ballSpr.position.y > GAME_HEIGHT - 20) {
             this.ballSpr.velocity.y -= 3;

@@ -5,3 +5,5 @@ const BOUNDARY_LEFT = 40;
 const BOUNDARY_RIGHT = GAME_WIDTH - 40;
 const BOUNDARY_TOP = 40;
 const BOUNDARY_BOTTOM = GAME_HEIGHT - 40;
+let homeScores = 0;
+let awayScores = 0;

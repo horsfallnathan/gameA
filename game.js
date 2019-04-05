@@ -5,7 +5,7 @@ class Game {
         this.homePlayer = new Player(400, 400, 37, 39, 38, 40, 76, 'home');
         this.homePost = new Posts(0, GAME_HEIGHT / 2, 40, 180);
         this.awayPost = new Posts(GAME_WIDTH, GAME_HEIGHT / 2, 40, 180);
-        this.goalie = new Goalkeeper(GAME_WIDTH, GAME_HEIGHT / 2, GAME_WIDTH, 'away');
+        this.goalie = new Goalkeeper(GAME_WIDTH, GAME_HEIGHT / 2, 'away');
         this.homeGoalie = new Goalkeeper(0, GAME_HEIGHT / 2, 'home');
         this.ball = new Ball();
         this.post = new Posts();
@@ -35,11 +35,18 @@ class Game {
         this.awayPost.draw();
     }
     over() {
-        this.gameOver = true;
+        if (120 - Math.floor(frameCount / 60) == 0) {
+            this.gameOver = true;
+            gameOver();
+            console.log('game over');
+        }
     }
 }
-// function gameOver() {
-//     resetPlayersBall {
-
-//     }
-// }
+function gameOver() {
+    winner();
+    let gameGet = document.getElementById('gameOver');
+    gameGet.classList.toggle('dTrue', true);
+    document.getElementById('newMatch').addEventListener('click', function() {
+        gameGet.classList.toggle('dTrue', false);
+    });
+}

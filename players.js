@@ -27,7 +27,23 @@ class Player {
         }
         if (this.team === 'away') this.aPlayer.displace(game.homePlayer.aPlayer);
         if (this.team === 'home') this.aPlayer.displace(game.awayPlayer.aPlayer);
+
+        // if (this.post.overlap(game.ball.ballSpr)) {
+        //     if (game.ball.ballSpr.position.x > GAME_WIDTH - 40) {
+        //         game.awayPlayer.position.x = 800;
+        //         game.awayPlayer.position.y = 400;
+        //         game.homePlayer.position.x = GAME_WIDTH;
+        //         game.homePlayer.position.y = GAME_HEIGHT / 2;
+        //     }
+        //     if (game.ball.ballSpr.position.x < 45) {
+        //         game.awayPlayer.position.x = 800;
+        //         game.awayPlayer.position.y = 400;
+        //         game.homePlayer.position.x = GAME_WIDTH;
+        //         game.homePlayer.position.y = GAME_HEIGHT / 2;
+        //     }
+        // }
     }
+
     move(left, right, up, down) {
         if (left && keyIsDown(left)) {
             this.aPlayer.position.x -= 4;
